@@ -1,0 +1,11 @@
+.hero-btn {
+    border: none;
+    background-color: inherit;
+}
+
+#bar{
+    height: 20px;
+}
+.label{
+    width: 50px;
+}

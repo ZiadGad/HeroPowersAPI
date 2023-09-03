@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="/styles/main.css">
+  <title>Super Heros</title>
+</head>
+
+<body>
+<%-include("hero.ejs")%>
+<div class="container mb-5 mt-2">
+    <div class="row p-5  pe-lg-0 pt-lg-5 align-items-top rounded-3 border shadow-lg col-10 mx-auto">
+        <div class="col-lg-4  p-0 overflow-hidden shadow-lg">
+            <img class="rounded-lg-3" src="<%= data.image.url %>" alt="Super Hero Image" width="345" height="100%">
+        </div>
+      <div class="col-lg-6 p-3 p-lg-5 pt-lg-3 pb-lg-1">
+        <h2 class="display-4 fw-bold lh-1 text-body-emphasis"><%=data.name%></h2>
+        <h3 class="fs-5 lh-1 text-body-emphasis mt-4 py-2">Power Status</h3>
+        <div class="bar col-lg-6 p-0 pt-lg-1 d-flex justify-content-between w-100">
+            <p class="label">intelligence</p>
+            <p><%=data.powerstats.intelligence%></p>
+            <progress id="bar" max="100" value="<%=data.powerstats.intelligence%>"></progress>
+        </div>
+        <div class="bar col-lg-6 p-0 pt-lg-1 d-flex justify-content-between w-100">
+            <p class="label">strength</p>
+            <p><%=data.powerstats.strength%></p>
+            <progress id="bar" max="100" value="<%=data.powerstats.strength%>" class="style="height: 1px"></progress>
+        </div>
+        <div class="bar col-lg-6 p-0 pt-lg-1 d-flex justify-content-between w-100">
+            <p class="label">speed</p>
+            <p><%=data.powerstats.speed%></p>
+            <progress id="bar" max="100" value="<%=data.powerstats.speed%>"></progress>
+        </div>
+        <div class="bar col-lg-6 p-0 pt-lg-1 d-flex justify-content-between w-100">
+            <p class="label">durability</p>
+            <p><%=data.powerstats.durability%></p>
+            <progress id="bar" max="100" value="<%=data.powerstats.durability%>"></progress>
+        </div>
+        <div class="bar col-lg-6 p-0 pt-lg-1 d-flex justify-content-between w-100">
+            <p class="label">power</p>
+            <p><%=data.powerstats.power%></p>
+            <progress id="bar" max="100" value="<%=data.powerstats.power%>"></progress>
+        </div>
+        <div class="bar col-lg-6 p-0 pt-lg-1 d-flex justify-content-between w-100">
+            <p class="label">combat</p>
+            <p><%=data.powerstats.combat%></p>
+            <progress id="bar" max="100" value="<%=data.powerstats.combat%>"></progress>
+        </div>
+    </div>
+
+    </div>
+  </div>
+<%-include("footer.ejs")%>
+
+</body>
+
+</html>

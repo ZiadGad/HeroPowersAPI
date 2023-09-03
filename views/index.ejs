@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="/styles/main.css">
+  <link rel="stylesheet" href="https://doniws.github.io/FontAwesome6Pro/pro/css/all.css">
+  <title>Super Heros</title>
+</head>
+
+<body>
+<%-include("hero.ejs")%>
+
+  <%if (locals.heroes) {%>
+    <form action="/superHeros" method="post">
+      <div class="container py-5">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-3">
+          <%if(heroes.results != undefined){%>
+            <% for (let i = 0 ; i < heroes.results.length;i++){%>
+              <button class="hero-btn" name="heroID" value="<%= heroes.results[i].id %>">
+                <div class="col">
+                  <div class="card shadow-sm">
+                    <img src=<%=heroes.results[i].image.url%> alt="" >
+                    <div class="card-body">
+                      <p class="card-text"><%=heroes.results[i].name%></p>
+                    </div>
+                  </div>
+                </div>
+              </button>
+            <%}%>
+          <%}else{%>
+            <div class="px-4 py-5 mt-5 text-center">
+              <p class="display-5 fw-bold text-body-emphasis">No Heroes</p>
+            </div>
+          <%}%>
+        </div>
+      </div>
+    </form>
+    <%}%>
+  <%-include("footer.ejs")%>
+</body>
+
+</html>
