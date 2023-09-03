@@ -3,7 +3,6 @@ import axios from "axios";
 import bodyParser from "body-parser";
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
-import { send } from "process";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
@@ -23,6 +22,7 @@ app.use('/css', express.static(__dirname + '/node_modules/bootstrap/dist/css'));
 
 app.get("/", (req, res) => {
     res.render("index.ejs",{heroes:data})
+    data="";
 })
 
 app.post("/selectHero",  async(req,res)=>{

@@ -19,36 +19,41 @@
       <div class="col-lg-6 p-3 p-lg-5 pt-lg-3 pb-lg-1">
         <h2 class="display-4 fw-bold lh-1 text-body-emphasis"><%=data.name%></h2>
         <h3 class="fs-5 lh-1 text-body-emphasis mt-4 py-2">Power Status</h3>
-        <div class="bar col-lg-6 p-0 pt-lg-1 d-flex justify-content-between w-100">
-            <p class="label">intelligence</p>
-            <p><%=data.powerstats.intelligence%></p>
-            <progress id="bar" max="100" value="<%=data.powerstats.intelligence%>"></progress>
+
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-3">
+            <div class="col d-flex justify-content-between w-100">
+                    <p class="label">intelligence</p>
+                    <p class="px-4"><%=data.powerstats.intelligence%></p>
+                    <progress id="bar" max="100" value="<%=data.powerstats.intelligence%>"></progress>
+            </div>
+            <div class="col d-flex justify-content-between w-100">
+                <p class="label">strength</p>
+                <p class="px-4"><%=data.powerstats.strength%></p>
+                <progress id="bar" max="100" value="<%=data.powerstats.strength%>" class="style="height: 1px"></progress>
+            </div>
+            <div class="col d-flex justify-content-between w-100">
+                <p class="label">speed</p>
+                <p class="px-4"><%=data.powerstats.speed%></p>
+                <progress id="bar" max="100" value="<%=data.powerstats.speed%>"></progress>
+            </div>
+            <div class="col d-flex justify-content-between w-100">
+                <p class="label">durability</p>
+                <p class="px-4"><%=data.powerstats.durability%></p>
+                <progress id="bar" max="100" value="<%=data.powerstats.durability%>"></progress>
+            </div>
+            <div class="col d-flex justify-content-between w-100">
+                <p class="label">power</p>
+                <p class="px-4"><%=data.powerstats.power%></p>
+                <progress id="bar" max="100" value="<%=data.powerstats.power%>"></progress>
+            </div>
+            <div class="bcol d-flex justify-content-between w-100">
+                <p class="label">combat</p>
+                <p class="px-4"><%=data.powerstats.combat%></p>
+                <progress id="bar" max="100" value="<%=data.powerstats.combat%>" ></progress>
+            </div>
         </div>
-        <div class="bar col-lg-6 p-0 pt-lg-1 d-flex justify-content-between w-100">
-            <p class="label">strength</p>
-            <p><%=data.powerstats.strength%></p>
-            <progress id="bar" max="100" value="<%=data.powerstats.strength%>" class="style="height: 1px"></progress>
-        </div>
-        <div class="bar col-lg-6 p-0 pt-lg-1 d-flex justify-content-between w-100">
-            <p class="label">speed</p>
-            <p><%=data.powerstats.speed%></p>
-            <progress id="bar" max="100" value="<%=data.powerstats.speed%>"></progress>
-        </div>
-        <div class="bar col-lg-6 p-0 pt-lg-1 d-flex justify-content-between w-100">
-            <p class="label">durability</p>
-            <p><%=data.powerstats.durability%></p>
-            <progress id="bar" max="100" value="<%=data.powerstats.durability%>"></progress>
-        </div>
-        <div class="bar col-lg-6 p-0 pt-lg-1 d-flex justify-content-between w-100">
-            <p class="label">power</p>
-            <p><%=data.powerstats.power%></p>
-            <progress id="bar" max="100" value="<%=data.powerstats.power%>"></progress>
-        </div>
-        <div class="bar col-lg-6 p-0 pt-lg-1 d-flex justify-content-between w-100">
-            <p class="label">combat</p>
-            <p><%=data.powerstats.combat%></p>
-            <progress id="bar" max="100" value="<%=data.powerstats.combat%>"></progress>
-        </div>
+
+        
     </div>
 
     </div>
